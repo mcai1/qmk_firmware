@@ -47,17 +47,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
-#define RGBLIGHT_ANIMATIONS
 #define RGB_DI_PIN C6
 #ifdef RGBLIGHT_ENABLE
 #define RGBLED_NUM 24    // Number of LEDs
-#define RGBLIGHT_LIMIT_VAL 200
+#define RGBLIGHT_LIMIT_VAL 150
 #endif
 
 /* RGB matrix support */
 #ifdef RGB_MATRIX_ENABLE
 #define DRIVER_LED_TOTAL 24 // Number of LEDs
-#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 150
+#define RGB_DISABLE_WHEN_USB_SUSPENDED true
 #endif
 
 /*
@@ -76,7 +76,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#    define RGBLIGHT_SAT_STEP 8
 //#    define RGBLIGHT_VAL_STEP 8
 //#    define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
-//#    define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
+#define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
 /*== all animations enable ==*/
 //#    define RGBLIGHT_ANIMATIONS
 /*== or choose animations ==*/
@@ -86,7 +86,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#    define RGBLIGHT_EFFECT_SNAKE
 //#    define RGBLIGHT_EFFECT_KNIGHT
 //#    define RGBLIGHT_EFFECT_CHRISTMAS
-//#    define RGBLIGHT_EFFECT_STATIC_GRADIENT
+#define RGBLIGHT_EFFECT_STATIC_GRADIENT
 //#    define RGBLIGHT_EFFECT_RGB_TEST
 //#    define RGBLIGHT_EFFECT_ALTERNATING
 /*== customize breathing effect ==*/
@@ -157,3 +157,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Bootmagic Lite key configuration */
 //#define BOOTMAGIC_LITE_ROW 0
 //#define BOOTMAGIC_LITE_COLUMN 0
+#define RGBLIGHT_LAYERS
